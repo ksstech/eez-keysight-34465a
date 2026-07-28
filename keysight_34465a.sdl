@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScpiDefinition xmlns="http://www.agilent.com/schemas/SCPIDL/2008" documentVersion="1.0" friendlyName="Keysight 34465A" schemaVersion="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.agilent.com/schemas/SCPIDL/2008 ScpiDefinitionLanguage.xsd">
+    <GlobalDefinitions>
+    <Enum name="OnOff">
+        <Member mnemonic="ON" value="1"/>
+        <Member mnemonic="OFF" value="2"/>
+    </Enum>
+    <Enum name="VDCRange">
+        <Member mnemonic="AUTO" value="1"/>
+        <Member mnemonic="DEF" value="2"/>
+        <Member mnemonic="MIN" value="3"/>
+        <Member mnemonic="MAX" value="4"/>
+        <Member mnemonic="0.1" value="5"/>
+        <Member mnemonic="1" value="6"/>
+        <Member mnemonic="10" value="7"/>
+        <Member mnemonic="100" value="8"/>
+        <Member mnemonic="1000" value="9"/>
+    </Enum>
+    <Enum name="VACRange">
+        <Member mnemonic="AUTO" value="1"/>
+        <Member mnemonic="DEF" value="2"/>
+        <Member mnemonic="MIN" value="3"/>
+        <Member mnemonic="MAX" value="4"/>
+        <Member mnemonic="0.1" value="5"/>
+        <Member mnemonic="1" value="6"/>
+        <Member mnemonic="10" value="7"/>
+        <Member mnemonic="100" value="8"/>
+        <Member mnemonic="750" value="9"/>
+    </Enum>
+    <Enum name="IDCRange">
+        <Member mnemonic="AUTO" value="1"/>
+        <Member mnemonic="DEF" value="2"/>
+        <Member mnemonic="MIN" value="3"/>
+        <Member mnemonic="MAX" value="4"/>
+        <Member mnemonic="0.0001" value="5"/>
+        <Member mnemonic="0.001" value="6"/>
+        <Member mnemonic="0.01" value="7"/>
+        <Member mnemonic="0.1" value="8"/>
+        <Member mnemonic="1" value="9"/>
+        <Member mnemonic="3" value="10"/>
+        <Member mnemonic="10" value="11"/>
+    </Enum>
+    <Enum name="ResRange">
+        <Member mnemonic="AUTO" value="1"/>
+        <Member mnemonic="DEF" value="2"/>
+        <Member mnemonic="MIN" value="3"/>
+        <Member mnemonic="MAX" value="4"/>
+        <Member mnemonic="100" value="5"/>
+        <Member mnemonic="1E3" value="6"/>
+        <Member mnemonic="10E3" value="7"/>
+        <Member mnemonic="100E3" value="8"/>
+        <Member mnemonic="1E6" value="9"/>
+        <Member mnemonic="10E6" value="10"/>
+        <Member mnemonic="100E6" value="11"/>
+        <Member mnemonic="1E9" value="12"/>
+    </Enum>
+    <Enum name="CapRange">
+        <Member mnemonic="AUTO" value="1"/>
+        <Member mnemonic="DEF" value="2"/>
+        <Member mnemonic="MIN" value="3"/>
+        <Member mnemonic="MAX" value="4"/>
+        <Member mnemonic="1E-9" value="5"/>
+        <Member mnemonic="10E-9" value="6"/>
+        <Member mnemonic="100E-9" value="7"/>
+        <Member mnemonic="1E-6" value="8"/>
+        <Member mnemonic="10E-6" value="9"/>
+        <Member mnemonic="100E-6" value="10"/>
+        <Member mnemonic="1E-3" value="11"/>
+        <Member mnemonic="10E-3" value="12"/>
+    </Enum>
+    <Enum name="Resolution">
+        <Member mnemonic="DEF" value="1"/>
+        <Member mnemonic="MIN" value="2"/>
+        <Member mnemonic="MAX" value="3"/>
+        <Member mnemonic="0.001" value="4"/>
+        <Member mnemonic="0.0001" value="5"/>
+        <Member mnemonic="0.00001" value="6"/>
+        <Member mnemonic="0.000001" value="7"/>
+    </Enum>
+    <Enum name="TrigSrc">
+        <Member mnemonic="IMMediate" value="1"/>
+        <Member mnemonic="BUS" value="2"/>
+        <Member mnemonic="EXTernal" value="3"/>
+        <Member mnemonic="INTernal" value="4"/>
+    </Enum>
+    <Enum name="SampleSrc">
+        <Member mnemonic="TIMER" value="1"/>
+        <Member mnemonic="IMMediate" value="2"/>
+    </Enum>
+    <Enum name="AutoZero">
+        <Member mnemonic="ON" value="1"/>
+        <Member mnemonic="OFF" value="2"/>
+        <Member mnemonic="ONCE" value="3"/>
+    </Enum>
+    <Enum name="TempProbe">
+        <Member mnemonic="DEFault" value="1"/>
+        <Member mnemonic="FRTD" value="2"/>
+        <Member mnemonic="RTD" value="3"/>
+        <Member mnemonic="FTHermistor" value="4"/>
+        <Member mnemonic="THERmistor" value="5"/>
+        <Member mnemonic="TCouple" value="6"/>
+    </Enum>
+    <Enum name="TCouple">
+        <Member mnemonic="E" value="1"/>
+        <Member mnemonic="J" value="2"/>
+        <Member mnemonic="K" value="3"/>
+        <Member mnemonic="N" value="4"/>
+        <Member mnemonic="R" value="5"/>
+        <Member mnemonic="S" value="6"/>
+        <Member mnemonic="T" value="7"/>
+        <Member mnemonic="B" value="8"/>
+    </Enum>
+    <Enum name="TempUnit">
+        <Member mnemonic="C" value="1"/>
+        <Member mnemonic="F" value="2"/>
+        <Member mnemonic="K" value="3"/>
+    </Enum>
+    <Enum name="CalcFunc">
+        <Member mnemonic="NONE" value="1"/>
+        <Member mnemonic="AVERage" value="2"/>
+        <Member mnemonic="NULL" value="3"/>
+        <Member mnemonic="DB" value="4"/>
+        <Member mnemonic="DBM" value="5"/>
+        <Member mnemonic="LIMit" value="6"/>
+        <Member mnemonic="CONV" value="7"/>
+        <Member mnemonic="SCALE" value="8"/>
+    </Enum>
+    <Enum name="DataFmt">
+        <Member mnemonic="ASCII" value="1"/>
+        <Member mnemonic="REAL,32" value="2"/>
+        <Member mnemonic="REAL,64" value="3"/>
+    </Enum>
+    <Enum name="DispView">
+        <Member mnemonic="NUMeric" value="1"/>
+        <Member mnemonic="HISTogram" value="2"/>
+        <Member mnemonic="TCHart" value="3"/>
+        <Member mnemonic="METer" value="4"/>
+    </Enum>
+    <Enum name="RouteTerms">
+        <Member mnemonic="FRONt" value="1"/>
+        <Member mnemonic="REAR" value="2"/>
+    </Enum>
+    </GlobalDefinitions>
+
+    <SubsystemNode mnemonic="*">
+        <CommandNode mnemonic="IDN" isQuery="true"/>
+        <CommandNode mnemonic="RST"/>
+        <CommandNode mnemonic="CLS"/>
+        <CommandNode mnemonic="OPC"/>
+        <CommandNode mnemonic="OPC" isQuery="true"/>
+        <CommandNode mnemonic="SRE"/>
+        <CommandNode mnemonic="SRE" isQuery="true"/>
+        <CommandNode mnemonic="STB" isQuery="true"/>
+        <CommandNode mnemonic="TRG"/>
+        <CommandNode mnemonic="WAI"/>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="MEASure">
+        <QueryNode mnemonic="VOLTage:DC"/>
+        <QueryNode mnemonic="VOLTage:DC:RATio"/>
+        <QueryNode mnemonic="VOLTage:AC"/>
+        <QueryNode mnemonic="CURRent:DC"/>
+        <QueryNode mnemonic="CURRent:AC"/>
+        <QueryNode mnemonic="RESistance"/>
+        <QueryNode mnemonic="FRESistance"/>
+        <QueryNode mnemonic="FREQuency"/>
+        <QueryNode mnemonic="PERiod"/>
+        <QueryNode mnemonic="CAPacitance"/>
+        <QueryNode mnemonic="TEMPerature"/>
+        <QueryNode mnemonic="CONTinuity"/>
+        <QueryNode mnemonic="DIODe"/>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="CONFigure">
+        <CommandNode mnemonic="VOLTage:DC"/>
+        <CommandNode mnemonic="VOLTage:AC"/>
+        <CommandNode mnemonic="CURRent:DC"/>
+        <CommandNode mnemonic="CURRent:AC"/>
+        <CommandNode mnemonic="RESistance"/>
+        <CommandNode mnemonic="FRESistance"/>
+        <CommandNode mnemonic="FREQuency"/>
+        <CommandNode mnemonic="PERiod"/>
+        <CommandNode mnemonic="CAPacitance"/>
+        <CommandNode mnemonic="TEMPerature"/>
+        <CommandNode mnemonic="CONTinuity"/>
+        <CommandNode mnemonic="DIODe"/>
+        <QueryNode mnemonic=""/>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="SENSe">
+        <CommandNode mnemonic="FUNCtion"/>
+        <QueryNode mnemonic="FUNCtion"/>
+        <SubsystemNode mnemonic="VOLTage">
+            <SubsystemNode mnemonic="DC">
+                <CommandNode mnemonic="RANGe"/>
+                <QueryNode mnemonic="RANGe"/>
+                <CommandNode mnemonic="RANGe:AUTO"/>
+                <CommandNode mnemonic="NPLCycles"/>
+                <QueryNode mnemonic="NPLCycles"/>
+                <CommandNode mnemonic="NULL:STATe"/>
+                <CommandNode mnemonic="NULL:VALue"/>
+                <QueryNode mnemonic="NULL:VALue"/>
+            </SubsystemNode>
+            <SubsystemNode mnemonic="AC">
+                <CommandNode mnemonic="RANGe"/>
+                <QueryNode mnemonic="RANGe"/>
+                <CommandNode mnemonic="NPLCycles"/>
+                <CommandNode mnemonic="BANDwidth"/>
+                <QueryNode mnemonic="BANDwidth"/>
+            </SubsystemNode>
+        </SubsystemNode>
+        <SubsystemNode mnemonic="CURRent">
+            <SubsystemNode mnemonic="DC">
+                <CommandNode mnemonic="RANGe"/>
+                <QueryNode mnemonic="RANGe"/>
+                <CommandNode mnemonic="NPLCycles"/>
+            </SubsystemNode>
+            <SubsystemNode mnemonic="AC">
+                <CommandNode mnemonic="RANGe"/>
+                <QueryNode mnemonic="RANGe"/>
+            </SubsystemNode>
+        </SubsystemNode>
+        <SubsystemNode mnemonic="RESistance">
+            <CommandNode mnemonic="RANGe"/>
+            <QueryNode mnemonic="RANGe"/>
+            <CommandNode mnemonic="NPLCycles"/>
+            <CommandNode mnemonic="OCOMpensated"/>
+        </SubsystemNode>
+        <SubsystemNode mnemonic="FRESistance">
+            <CommandNode mnemonic="RANGe"/>
+            <QueryNode mnemonic="RANGe"/>
+            <CommandNode mnemonic="NPLCycles"/>
+        </SubsystemNode>
+        <SubsystemNode mnemonic="FREQuency">
+            <CommandNode mnemonic="APERture"/>
+            <QueryNode mnemonic="APERture"/>
+        </SubsystemNode>
+        <SubsystemNode mnemonic="TEMPerature">
+            <CommandNode mnemonic="TRANsducer"/>
+            <QueryNode mnemonic="TRANsducer"/>
+            <CommandNode mnemonic="TCouple:TYPE"/>
+            <QueryNode mnemonic="TCouple:TYPE"/>
+            <CommandNode mnemonic="UNIT"/>
+            <QueryNode mnemonic="UNIT"/>
+        </SubsystemNode>
+        <SubsystemNode mnemonic="CAPacitance">
+            <CommandNode mnemonic="RANGe"/>
+            <QueryNode mnemonic="RANGe"/>
+        </SubsystemNode>
+        <CommandNode mnemonic="ZERO:AUTO"/>
+        <QueryNode mnemonic="ZERO:AUTO"/>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="READ" isQuery="true"/>
+    <SubsystemNode mnemonic="INITiate"/>
+    <SubsystemNode mnemonic="ABORt"/>
+    <SubsystemNode mnemonic="FETCh" isQuery="true"/>
+    <SubsystemNode mnemonic="TRIGger">
+        <CommandNode mnemonic="SOURce"/>
+        <QueryNode mnemonic="SOURce"/>
+        <CommandNode mnemonic="DELay"/>
+        <QueryNode mnemonic="DELay"/>
+        <CommandNode mnemonic="DELay:AUTO"/>
+        <CommandNode mnemonic="COUNt"/>
+        <QueryNode mnemonic="COUNt"/>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="SAMPle">
+        <CommandNode mnemonic="COUNt"/>
+        <QueryNode mnemonic="COUNt"/>
+        <CommandNode mnemonic="SOURce"/>
+        <QueryNode mnemonic="SOURce"/>
+        <CommandNode mnemonic="TIMer"/>
+        <QueryNode mnemonic="TIMer"/>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="CALCulate">
+        <CommandNode mnemonic="FUNCtion"/>
+        <QueryNode mnemonic="FUNCtion"/>
+        <CommandNode mnemonic="STATe"/>
+        <QueryNode mnemonic="STATe"/>
+        <SubsystemNode mnemonic="AVERage">
+            <QueryNode mnemonic="MINimum"/>
+            <QueryNode mnemonic="MAXimum"/>
+            <QueryNode mnemonic="AVERage"/>
+            <QueryNode mnemonic="COUNt"/>
+            <QueryNode mnemonic="SDEViation"/>
+        </SubsystemNode>
+        <SubsystemNode mnemonic="NULL">
+            <CommandNode mnemonic="OFFSet"/>
+            <QueryNode mnemonic="OFFSet"/>
+        </SubsystemNode>
+        <SubsystemNode mnemonic="LIMit">
+            <CommandNode mnemonic="LOWer"/>
+            <QueryNode mnemonic="LOWer"/>
+            <CommandNode mnemonic="UPPer"/>
+            <QueryNode mnemonic="UPPer"/>
+            <QueryNode mnemonic="FAIL"/>
+        </SubsystemNode>
+        <CommandNode mnemonic="DB:REFerence"/>
+        <CommandNode mnemonic="DBM:REFerence"/>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="DATA">
+        <QueryNode mnemonic="POINts"/>
+        <QueryNode mnemonic="REMove"/>
+        <QueryNode mnemonic="LAST"/>
+        <CommandNode mnemonic="POINts:EVENt:THReshold"/>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="FORMat">
+        <CommandNode mnemonic="DATA"/>
+        <QueryNode mnemonic="DATA"/>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="DISPlay">
+        <CommandNode mnemonic=""/>
+        <QueryNode mnemonic=""/>
+        <CommandNode mnemonic="TEXT"/>
+        <QueryNode mnemonic="TEXT"/>
+        <CommandNode mnemonic="TEXT:CLEar"/>
+        <CommandNode mnemonic="VIEW"/>
+        <QueryNode mnemonic="VIEW"/>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="SYSTem">
+        <QueryNode mnemonic="ERRor"/>
+        <QueryNode mnemonic="ERRor:COUNt"/>
+        <QueryNode mnemonic="VERSion"/>
+        <CommandNode mnemonic="DATE"/>
+        <QueryNode mnemonic="DATE"/>
+        <CommandNode mnemonic="TIME"/>
+        <QueryNode mnemonic="TIME"/>
+        <CommandNode mnemonic="LOCal"/>
+        <CommandNode mnemonic="REMote"/>
+        <CommandNode mnemonic="RWLock"/>
+        <CommandNode mnemonic="BEEPer"/>
+        <CommandNode mnemonic="BEEPer:STATe"/>
+        <QueryNode mnemonic="BEEPer:STATe"/>
+        <CommandNode mnemonic="PRESet"/>
+        <SubsystemNode mnemonic="COMMunicate">
+            <SubsystemNode mnemonic="LAN">
+                <CommandNode mnemonic="DHCP"/>
+                <QueryNode mnemonic="DHCP"/>
+                <QueryNode mnemonic="IPADdress"/>
+                <QueryNode mnemonic="MACaddress"/>
+                <QueryNode mnemonic="HOSTname"/>
+                <CommandNode mnemonic="UPDate"/>
+            </SubsystemNode>
+        </SubsystemNode>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="ROUTe">
+        <CommandNode mnemonic="TERMinals"/>
+        <QueryNode mnemonic="TERMinals"/>
+    </SubsystemNode>
+    <SubsystemNode mnemonic="INPut">
+        <CommandNode mnemonic="IMPedance:AUTO"/>
+        <QueryNode mnemonic="IMPedance:AUTO"/>
+    </SubsystemNode>
+
+</ScpiDefinition>

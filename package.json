@@ -1,0 +1,390 @@
+{
+  "id": "5483655d-dc8c-4b53-bac9-8acfd8366921",
+  "name": "keysight_34465a",
+  "description": "6.5-digit Truevolt digital multimeter",
+  "displayName": "Keysight 34465A",
+  "version": "1.0.46",
+  "author": "Community",
+  "eez-studio": {
+    "properties": {
+      "idn": "Keysight Technologies,34465A",
+      "connection": {
+        "ethernet": {
+          "port": 5025
+        },
+        "usbtmc": {
+          "idVendor": "0x2a8d",
+          "idProduct": "0x0101"
+        }
+      },
+      "channels": [
+        {
+          "color": "#2196F3",
+          "colorInverse": "#1565C0"
+        }
+      ]
+    },
+    "shortcuts": [
+      {
+        "id": "95d94790-582b-4733-ae9d-eb7386fba10b",
+        "name": "DCV",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:VOLTage:DC DEF,DEF\nREAD?"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 1,
+        "toolbarButtonColor": "#2196F3",
+        "requiresConfirmation": false,
+        "keybinding": "f1"
+      },
+      {
+        "id": "21aa5825-e45d-4ac6-84e0-3e433d40b5c4",
+        "name": "ACV",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:VOLTage:AC DEF,DEF\nREAD?"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 2,
+        "toolbarButtonColor": "#FF9800",
+        "requiresConfirmation": false,
+        "keybinding": "f2"
+      },
+      {
+        "id": "537a0742-1659-4823-8a62-135cc6a253cf",
+        "name": "DCI",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:CURRent:DC DEF,DEF\nREAD?"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 3,
+        "toolbarButtonColor": "#F44336",
+        "requiresConfirmation": false,
+        "keybinding": "f3"
+      },
+      {
+        "id": "762b1e34-9905-48d6-95a0-2070e47e4d0f",
+        "name": "ACI",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:CURRent:AC DEF,DEF\nREAD?"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 4,
+        "toolbarButtonColor": "#FF5722",
+        "requiresConfirmation": false,
+        "keybinding": "f4"
+      },
+      {
+        "id": "f39410c5-83e6-4d8e-99e4-14266014ec1f",
+        "name": "2W Res",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:RESistance DEF,DEF\nREAD?"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 5,
+        "toolbarButtonColor": "#4CAF50",
+        "requiresConfirmation": false,
+        "keybinding": "f5"
+      },
+      {
+        "id": "c8d862f4-81f5-450d-ba2e-d419e6db50fd",
+        "name": "4W Res",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:FRESistance DEF,DEF\nREAD?"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 6,
+        "toolbarButtonColor": "#00897B",
+        "requiresConfirmation": false,
+        "keybinding": "f6"
+      },
+      {
+        "id": "1a0ee08d-5d31-4f47-ab7f-6f0d090d9745",
+        "name": "Freq",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:FREQuency DEF,DEF\nREAD?"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 7,
+        "toolbarButtonColor": "#9C27B0",
+        "requiresConfirmation": false,
+        "keybinding": "f7"
+      },
+      {
+        "id": "012b13b2-d704-42c0-9e01-32828a0a788e",
+        "name": "Cap",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:CAPacitance DEF,DEF\nREAD?"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 8,
+        "toolbarButtonColor": "#795548",
+        "requiresConfirmation": false,
+        "keybinding": "f8"
+      },
+      {
+        "id": "62f96e67-c127-414a-9b7f-44d44f4a058a",
+        "name": "Cont",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:CONTinuity\nREAD?"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 9,
+        "toolbarButtonColor": "#607D8B",
+        "requiresConfirmation": false,
+        "keybinding": "f9"
+      },
+      {
+        "id": "1ae1ec9d-f65c-4eca-b39c-e41ae13f272f",
+        "name": "Diode",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:DIODe\nREAD?"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 10,
+        "toolbarButtonColor": "#546E7A",
+        "requiresConfirmation": false,
+        "keybinding": "f10"
+      },
+      {
+        "id": "81c5f535-05a5-4f4a-a04d-d0d12124533b",
+        "name": "Period",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:PERiod DEF,DEF\nREAD?"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#7B1FA2",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "a565fed1-a983-4e7d-829f-5762412a15e2",
+        "name": "Temp",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CONFigure:TEMPerature\nREAD?"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#FF6F00",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "0591a1ee-28ea-4c6d-bd78-0cd5ec72e06b",
+        "name": "LR v46",
+        "action": {
+          "type": "javascript",
+          "data": "// \u2500\u2500 34465A Live Read v46 \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n// Uses READ? with IMMediate trigger \u2014 no interleaved SCPI queries\n// during measurement. Range check done every RANGE_CHECK_EVERY readings by\n// briefly querying CONFigure? BETWEEN readings (after READ? returns).\n// ACV/ACI: two rows RMS + P-P. All others: single row.\n//\nconst COUNT             = 2000;   // max readings (0 = unlimited)\nconst NPLC              = 1;      // DC/resistance only: 1=6.5 digits ~4 rdg/s  |  0.2=5.5 digits ~10 rdg/s\nconst AC_BANDWIDTH      = 200;    // AC bandwidth filter (Hz): 3=slow/accurate  20=medium  200=fast\nconst RANGE_CHECK_EVERY = 10;     // check for auto-range change every N readings\n\nfunction qts(r) {\n    if (r===null||r===undefined) return \"\";\n    if (typeof r===\"string\") return r;\n    if (typeof r===\"number\") return String(r);\n    if (r.data) {\n        const t = new TextDecoder().decode(new Uint8Array(r.data));\n        return t.charAt(0)==='#' ? t.substring(2+parseInt(t.charAt(1))) : t;\n    }\n    return String(r);\n}\n\nconst SI_P = [[1e12,\"T\"],[1e9,\"G\"],[1e6,\"M\"],[1e3,\"k\"],[1,\"\"],[1e-3,\"m\"],[1e-6,\"\\u03bc\"],[1e-9,\"n\"],[1e-12,\"p\"],[1e-15,\"f\"]];\n\nfunction siFor(a) {\n    if (a === 0) return {scale:1, pfx:\"\"};\n    for (const [s,p] of SI_P) { if (a >= s*0.9999) return {scale:s, pfx:p}; }\n    return {scale:1e-15, pfx:\"f\"};\n}\n\nfunction fmt(v, scale) { return parseFloat((v/scale).toPrecision(6)).toString(); }\n\nfunction fmtVal(v, sfx) {\n    if (!isFinite(v)) return String(v)+\" \"+sfx;\n    const a=Math.abs(v), sg=v<0?\"-\":\"\";\n    if (sfx.indexOf(\"\\u00b0\")>=0 || a===0) return sg+parseFloat(a.toPrecision(6))+\" \"+sfx;\n    const {scale,pfx}=siFor(a);\n    return sg+parseFloat((a/scale).toPrecision(6))+\" \"+pfx+sfx;\n}\n\nfunction parseConf(raw) {\n    const s=raw.trim().replace(/\"/g,\"\"), p=s.split(/[\\s,]+/);\n    return {func:p[0]||s, range:parseFloat(p[1]), res:parseFloat(p[2])};\n}\n\nfunction buildHeader(func, range, res, sfx) {\n    const r = (isFinite(range)&&range>0) ? \"  \"+fmtVal(range,sfx) : \"\";\n    const d = (isFinite(res)  &&res  >0) ? \"  res \"+fmtVal(res,sfx) : \"\";\n    return func+r+d;\n}\n\nfunction row3(label, sfx, a, b, c) {\n    const ref=Math.abs(b)||Math.abs(a)||Math.abs(c)||1;\n    const noP=sfx.indexOf(\"\\u00b0\")>=0;\n    const {scale,pfx}=noP?{scale:1,pfx:\"\"}:siFor(ref);\n    const u=noP?sfx:pfx+sfx;\n    const sep = label ? label+\" \"+u+\": \" : u+\": \";\n    return sep+fmt(a,scale)+\" | \"+fmt(b,scale)+\" | \"+fmt(c,scale);\n}\n\nconst toastId = notify.info(\"34465A Live Read: starting...\", {autoClose:false});\n\n\n// \u2500\u2500 Force a clean connection before any acquire \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n// Disconnect and reconnect to clear any stuck acquire queue.\n// Then acquire(true) to set up query response handling.\nasync function resetAndAcquire() {\n    // Release any held lock without disconnecting.\n    // Disconnect/reconnect caused READ? timeout \u2014 instrument not ready post-reconnect.\n    try { connection.release(); } catch(e) {}\n    await new Promise(r=>setTimeout(r,500));\n    await connection.acquire(true);\n}\n\nawait resetAndAcquire();\n\ntry {\n    // \u2500\u2500 Clear any prior errors and query initial state \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n    connection.command(\"*CLS\");\n    await new Promise(r=>setTimeout(r,200));  // let *CLS settle\n\n    let conf = parseConf(qts(await connection.query(\"CONFigure?\")));\n    const fUp = conf.func.toUpperCase();\n\n    let sfx=\"\", eezUnit=\"unknown\", rangeQuery=null, nplcCmd=null, isAC=false, confCmd=null;\n    if      (fUp.includes(\"VOLT\")&&fUp.includes(\"DC\")) { sfx=\"DCV\"; eezUnit=\"volt\";      rangeQuery=\"SENSe:VOLTage:DC:RANGe?\"; nplcCmd=\"SENSe:VOLTage:DC:NPLCycles\"; confCmd=\"CONFigure:VOLTage:DC DEF,DEF\"; }\n    else if (fUp.includes(\"VOLT\")&&fUp.includes(\"AC\")) { sfx=\"ACV\"; eezUnit=\"volt\";      rangeQuery=\"SENSe:VOLTage:AC:RANGe?\"; nplcCmd=null; isAC=true; /* NPLCycles invalid for ACV on A.03.03 */ confCmd=\"CONFigure:VOLTage:AC DEF,DEF\"; }\n    else if (fUp.includes(\"CURR\")&&fUp.includes(\"DC\")) { sfx=\"DCI\"; eezUnit=\"amp\";       rangeQuery=\"SENSe:CURRent:DC:RANGe?\"; nplcCmd=\"SENSe:CURRent:DC:NPLCycles\"; confCmd=\"CONFigure:CURRent:DC DEF,DEF\"; }\n    else if (fUp.includes(\"CURR\")&&fUp.includes(\"AC\")) { sfx=\"ACI\"; eezUnit=\"amp\";       rangeQuery=\"SENSe:CURRent:AC:RANGe?\"; nplcCmd=null; isAC=true; /* NPLCycles invalid for ACI on A.03.03 */ confCmd=\"CONFigure:CURRent:AC DEF,DEF\"; }\n    else if (fUp.includes(\"FRES\"))                     { sfx=\"\\u03a9 4W\"; eezUnit=\"unknown\"; rangeQuery=\"SENSe:FRESistance:RANGe?\"; nplcCmd=\"SENSe:FRESistance:NPLCycles\"; confCmd=\"CONFigure:FRESistance DEF,DEF\"; }\n    else if (fUp.includes(\"RES\"))                      { sfx=\"\\u03a9\";    eezUnit=\"unknown\"; rangeQuery=\"SENSe:RESistance:RANGe?\";  nplcCmd=\"SENSe:RESistance:NPLCycles\"; confCmd=\"CONFigure:RESistance DEF,DEF\"; }\n    else if (fUp.includes(\"FREQ\"))                     { sfx=\"Hz\";  eezUnit=\"frequency\"; confCmd=\"CONFigure:FREQuency DEF,DEF\"; }\n    else if (fUp.includes(\"CAP\"))                      { sfx=\"F\";   eezUnit=\"unknown\"; rangeQuery=\"SENSe:CAPacitance:RANGe?\"; confCmd=\"CONFigure:CAPacitance DEF,DEF\"; }\n    else if (fUp.includes(\"TEMP\"))                     { sfx=\"\\u00b0C\"; eezUnit=\"unknown\"; confCmd=\"CONFigure:TEMPerature\"; }\n    else if (fUp.includes(\"CONT\"))                     { sfx=\"\\u03a9\";  eezUnit=\"unknown\"; confCmd=\"CONFigure:CONTinuity\"; }\n    else if (fUp.includes(\"DIOD\"))                     { sfx=\"V\";   eezUnit=\"volt\"; confCmd=\"CONFigure:DIODe\"; }\n    else if (fUp.includes(\"PER\"))                      { sfx=\"s\";   eezUnit=\"unknown\"; confCmd=\"CONFigure:PERiod DEF,DEF\"; }\n\n    const baseSfxMap = {\"DCV\":\"V\",\"ACV\":\"V\",\"DCI\":\"A\",\"ACI\":\"A\"};\n    const baseSfx = baseSfxMap[sfx] || sfx;\n\n    // Query initial range BEFORE arming trigger\n    if (rangeQuery) {\n        const rr = parseFloat(qts(await connection.query(rangeQuery)));\n        if (isFinite(rr) && rr > 0) conf.range = rr;\n    }\n\n    // Re-send CONFigure to initialise the measurement engine.\n    // After *CLS or fresh connection, READ? hangs without this.\n    if (confCmd) connection.command(confCmd);\n    // AC bandwidth filter controls speed/accuracy for ACV/ACI (NPLC disabled for AC)\n    if (isAC) connection.command(\"SENSe:VOLTage:AC:BANDwidth \" + AC_BANDWIDTH);\n    await new Promise(r=>setTimeout(r,200));\n\n    let headerBase = buildHeader(conf.func, conf.range, conf.res, sfx);\n    notify.update(toastId, {render: headerBase+\"  \\u2014 starting...\", autoClose:false});\n\n    // \u2500\u2500 Configure instrument \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n    // ABORt first, then configure, then arm.\n    // Do NOT query anything between INITiate/*TRG and READ? \u2014 queries\n    // interleaved with IMMediate trigger cause errors 113/230.\n    // Instead: READ? itself triggers each reading; range check done AFTER\n    // READ? returns (between readings), safely outside the trigger engine.\n    connection.command(\"ABORt\");\n    if (nplcCmd) connection.command(nplcCmd + \" \" + NPLC);\n\n    // ZERO:AUTO only valid for DCV, DCI, 2W/4W resistance\n    const supportsZeroAuto = fUp.includes(\"VOLT:DC\") || fUp.includes(\"CURR:DC\")\n        || fUp.includes(\"RES\") || fUp.includes(\"FRES\");\n    if (supportsZeroAuto) connection.command(\"SENSe:ZERO:AUTO ONCE\");\n\n    // Minimal trigger setup \u2014 diagnostic confirmed:\n    // TRIGger:SOURce IMMediate causes -113 on 34465A, so omitted.\n    // TRIGger:COUNt INFinity causes READ? timeout, so omitted.\n    // READ? self-triggers correctly with just SAMPle:COUNt 1.\n    connection.command(\"SAMPle:COUNt 1\");\n    connection.command(\"FORMat:DATA ASCII\");\n\n    // \u2500\u2500 Read loop \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n    var rmsVals=[], i=0;\n    const unlimited = (COUNT===0);\n    const SQRT2x2 = 2*Math.sqrt(2);\n\n    while (unlimited || i<COUNT) {\n        if (session.isStopped) {\n            notify.update(toastId,{render:\"34465A Live: stopped at \"+i+\" readings\",autoClose:3000});\n            break;\n        }\n\n        // READ? self-triggers \u2014 no separate INITiate/TRG needed\n        const raw = parseFloat(qts(await connection.query(\"READ?\")).trim());\n        if (!isFinite(raw)) { i++; continue; }\n\n        rmsVals.push(raw);\n        const rmsMin = rmsVals.reduce((a,b)=>a<b?a:b, rmsVals[0]);\n        const rmsMax = rmsVals.reduce((a,b)=>a>b?a:b, rmsVals[0]);\n        const counter = \"  [\"+(i+1)+(unlimited?\"\":\"/\"+COUNT)+\"]\";\n\n        let render;\n        if (isAC) {\n            const ppCur=raw*SQRT2x2, ppMin=rmsMin*SQRT2x2, ppMax=rmsMax*SQRT2x2;\n            render = headerBase+counter\n                +\"    \"+row3(\"RMS\",sfx,    rmsMin, raw,    rmsMax)\n                +\"    \"+row3(\"P-P\",baseSfx, ppMin,  ppCur,  ppMax);\n        } else {\n            render = headerBase+counter+\"    \"+row3(\"\",sfx,rmsMin,raw,rmsMax);\n        }\n        notify.update(toastId, {render, autoClose:false});\n\n        // Range check AFTER READ? returns \u2014 safe, between readings\n        // Any range step is a clean decade change, !== is the right test\n        if (rangeQuery && i>0 && i%RANGE_CHECK_EVERY===0) {\n            const newRange = parseFloat(qts(await connection.query(rangeQuery)));\n            if (isFinite(newRange) && newRange>0 && newRange!==conf.range) {\n                conf.range = newRange;\n                const nc = parseConf(qts(await connection.query(\"CONFigure?\")));\n                conf.res = nc.res;\n                headerBase = buildHeader(conf.func, conf.range, conf.res, sfx);\n            }\n        }\n        i++;\n    }\n\n    if (rmsVals.length===0) throw new Error(\"No valid readings received\");\n\n    const min=rmsVals.reduce((a,b)=>a<b?a:b,rmsVals[0]);\n    const max=rmsVals.reduce((a,b)=>a>b?a:b,rmsVals[0]);\n    const mean=rmsVals.reduce((a,b)=>a+b,0)/rmsVals.length;\n    const std=Math.sqrt(rmsVals.reduce((a,b)=>a+(b-mean)**2,0)/rmsVals.length);\n    const pp=max-min;\n\n    notify.dismiss(toastId);\n    let summary=headerBase+\"  N=\"+rmsVals.length\n        +\"    RMS: Mean=\"+fmtVal(mean,sfx)+\"  \\u03c3=\"+fmtVal(std,sfx)\n        +\"  Min=\"+fmtVal(min,sfx)+\"  Max=\"+fmtVal(max,sfx);\n    if (isAC) summary+=\"    P-P: Mean=\"+fmtVal(mean*SQRT2x2,baseSfx)\n        +\"  Min=\"+fmtVal(min*SQRT2x2,baseSfx)+\"  Max=\"+fmtVal(max*SQRT2x2,baseSfx);\n    notify.info(summary);\n\n    const f64=new Float64Array(rmsVals), u8=new Uint8Array(f64.buffer);\n    const vScale=(isFinite(conf.range)&&conf.range>0)\n        ? conf.range/8\n        : Math.max(pp>1e-9?pp/8:Math.abs(mean)/4, 1e-7);\n    const estInterval=NPLC/60+0.05;  // NPLC/60Hz + ~50ms LAN overhead\n    const hScale=(rmsVals.length*estInterval)/10;\n\n    session.addChart({\n        description:headerBase+\" | N=\"+rmsVals.length+\" | Mean=\"+fmtVal(mean,sfx)+\" \\u03c3=\"+fmtVal(std,sfx)+\" PP=\"+fmtVal(pp,sfx),\n        data:[u8], samplingRate:1/estInterval, offset:0, scale:1, format:8,\n        unit:eezUnit, color:\"#4CAF50\", colorInverse:\"#2E7D32\", label:\"34465A Live\",\n        viewOptions:{axesLines:{type:\"fixed\",majorSubdivision:{horizontal:10,vertical:8},minorSubdivision:{horizontal:5,vertical:5}}},\n        horizontalScale:hScale, verticalScale:vScale\n    });\n\n} catch(e) {\n    notify.update(toastId,{render:\"Live Read failed: \"+e.message,autoClose:5000,type:\"error\"});\n} finally {\n    connection.command(\"ABORt\");\n    connection.command(\"FORMat:DATA ASCII\");\n    connection.command(\"SYSTem:LOCal\");  // return front panel control\n    await new Promise(r=>setTimeout(r,200));\n    connection.release();\n}"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#4CAF50",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "bdbfd9e7-a11f-4730-8bc8-5a7cfee71887",
+        "name": "Acq DCV 100\u00d70.5s",
+        "action": {
+          "type": "javascript",
+          "data": "\nfunction fmtVal(v, sfx) {\n    if (!isFinite(v)) return String(v) + \" \" + sfx;\n    const a = Math.abs(v), sg = v < 0 ? \"-\" : \"\";\n    const noP = sfx.indexOf(\"\\u00b0\") >= 0 || sfx === \"\";\n    if (noP || a === 0) return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n    const P = [[1e12,\"T\"],[1e9,\"G\"],[1e6,\"M\"],[1e3,\"k\"],[1,\"\"],[1e-3,\"m\"],[1e-6,\"\\u03bc\"],[1e-9,\"n\"],[1e-12,\"p\"],[1e-15,\"f\"]];\n    for (const [sc,px] of P) {\n        if (a >= sc * 0.9999) {\n            return sg + parseFloat((a/sc).toPrecision(6)) + \" \" + px + sfx;\n        }\n    }\n    return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n}\n// \u2500\u2500 34465A Acquire: DCV \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nconst COUNT=100,INTERVAL=0.5,LABEL=\"DCV\",SFX=\"VDC\";\nfunction qts(r){if(r===null||r===undefined)return\"\";if(typeof r===\"string\")return r;if(typeof r===\"number\")return String(r);if(r.data){const t=new TextDecoder().decode(new Uint8Array(r.data));return t.charAt(0)==='#'?t.substring(2+parseInt(t.charAt(1))):t;}return String(r);}\nconnection.acquire();\ntry{\n    connection.command(\"ABORt\");connection.command(\"CONFigure:VOLTage:DC DEF,DEF\");\n    connection.command(\"SENSe:VOLTage:DC:NPLCycles 1\");\n    connection.command(\"SENSe:ZERO:AUTO ON\");connection.command(\"FORMat:DATA ASCII\");\n    connection.command(\"SAMPle:COUNt \"+COUNT);connection.command(\"SAMPle:SOURce TIMER\");\n    connection.command(\"SAMPle:TIMer \"+INTERVAL);connection.command(\"TRIGger:SOURce BUS\");\n    connection.command(\"TRIGger:COUNt 1\");connection.command(\"INITiate\");connection.command(\"*TRG\");\n    notify.info(\"34465A: acquiring \"+COUNT+\" \"+LABEL+\" @ \"+INTERVAL+\"s each...\");\n    const deadline=Date.now()+(COUNT*INTERVAL*1000)+30000;var stored=0;\n    while(stored<COUNT){\n        await new Promise(r=>setTimeout(r,2000));\n        stored=parseInt(qts(await connection.query(\"DATA:POINts?\")))||0;\n        notify.info(\"Stored: \"+stored+\" / \"+COUNT);\n        if(Date.now()>deadline){notify.info(\"Deadline \u2014 fetching \"+stored);break;}\n    }\n    if(stored===0)throw new Error(\"No readings in memory\");\n    const CHUNK=500;var vals=[],remaining=stored,lastStr=\"\";\n    while(remaining>0){\n        const n=Math.min(CHUNK,remaining);\n        lastStr=qts(await connection.query(\"DATA:REMove? \"+n));\n        const p=lastStr.trim().split(\",\").map(Number).filter(v=>isFinite(v));\n        vals=vals.concat(p);remaining-=n;if(p.length===0)break;\n    }\n    if(vals.length===0)throw new Error(\"0 valid values. Raw: \"+lastStr.substring(0,120));\n    const min=vals.reduce((a,b)=>a<b?a:b,vals[0]),max=vals.reduce((a,b)=>a>b?a:b,vals[0]);\n    const mean=vals.reduce((a,b)=>a+b,0)/vals.length;\n    const std=Math.sqrt(vals.reduce((a,b)=>a+(b-mean)**2,0)/vals.length),pp=max-min;\n    notify.info(LABEL+\" N=\"+vals.length\n        +\"  Mean=\"+fmtVal(mean,SFX)\n        +\"  \u03c3=\"+fmtVal(std,SFX)\n        +\"  P-P=\"+fmtVal(pp,SFX)\n        +\"  Min=\"+fmtVal(min,SFX)\n        +\"  Max=\"+fmtVal(max,SFX));\n    const f64=new Float64Array(vals),u8=new Uint8Array(f64.buffer);\n    const hScale=(COUNT*INTERVAL)/10,rawV=pp>1e-9?pp/8:Math.abs(mean)/4,vScale=Math.max(rawV,1e-7);\n    session.addChart({description:\"34465A \"+LABEL+\" | N=\"+vals.length+\" @\"+INTERVAL+\"s | Mean=\"+fmtVal(mean,SFX)+\" \u03c3=\"+fmtVal(std,SFX)+\" PP=\"+fmtVal(pp,SFX),data:[u8],samplingRate:1/INTERVAL,offset:0,scale:1,format:8,unit:\"volt\",color:\"#2196F3\",colorInverse:\"#1565C0\",label:\"34465A \"+LABEL,viewOptions:{axesLines:{type:\"fixed\",majorSubdivision:{horizontal:10,vertical:8},minorSubdivision:{horizontal:5,vertical:5}}},horizontalScale:hScale,verticalScale:vScale});\n}catch(e){notify.error(\"Acquire failed: \"+e.message);}\nfinally{connection.command(\"ABORt\");connection.command(\"FORMat:DATA ASCII\");connection.release();}"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#1565C0",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "ef00e695-3f9c-4e45-8d03-5007202b6303",
+        "name": "Acq DCV 1000\u00d70.1s",
+        "action": {
+          "type": "javascript",
+          "data": "\nfunction fmtVal(v, sfx) {\n    if (!isFinite(v)) return String(v) + \" \" + sfx;\n    const a = Math.abs(v), sg = v < 0 ? \"-\" : \"\";\n    const noP = sfx.indexOf(\"\\u00b0\") >= 0 || sfx === \"\";\n    if (noP || a === 0) return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n    const P = [[1e12,\"T\"],[1e9,\"G\"],[1e6,\"M\"],[1e3,\"k\"],[1,\"\"],[1e-3,\"m\"],[1e-6,\"\\u03bc\"],[1e-9,\"n\"],[1e-12,\"p\"],[1e-15,\"f\"]];\n    for (const [sc,px] of P) {\n        if (a >= sc * 0.9999) {\n            return sg + parseFloat((a/sc).toPrecision(6)) + \" \" + px + sfx;\n        }\n    }\n    return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n}\n// \u2500\u2500 34465A Acquire: DCV \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nconst COUNT=1000,INTERVAL=0.1,LABEL=\"DCV\",SFX=\"VDC\";\nfunction qts(r){if(r===null||r===undefined)return\"\";if(typeof r===\"string\")return r;if(typeof r===\"number\")return String(r);if(r.data){const t=new TextDecoder().decode(new Uint8Array(r.data));return t.charAt(0)==='#'?t.substring(2+parseInt(t.charAt(1))):t;}return String(r);}\nconnection.acquire();\ntry{\n    connection.command(\"ABORt\");connection.command(\"CONFigure:VOLTage:DC DEF,DEF\");\n    connection.command(\"SENSe:VOLTage:DC:NPLCycles 0.02\");\n    connection.command(\"SENSe:ZERO:AUTO ON\");connection.command(\"FORMat:DATA ASCII\");\n    connection.command(\"SAMPle:COUNt \"+COUNT);connection.command(\"SAMPle:SOURce TIMER\");\n    connection.command(\"SAMPle:TIMer \"+INTERVAL);connection.command(\"TRIGger:SOURce BUS\");\n    connection.command(\"TRIGger:COUNt 1\");connection.command(\"INITiate\");connection.command(\"*TRG\");\n    notify.info(\"34465A: acquiring \"+COUNT+\" \"+LABEL+\" @ \"+INTERVAL+\"s each...\");\n    const deadline=Date.now()+(COUNT*INTERVAL*1000)+30000;var stored=0;\n    while(stored<COUNT){\n        await new Promise(r=>setTimeout(r,2000));\n        stored=parseInt(qts(await connection.query(\"DATA:POINts?\")))||0;\n        notify.info(\"Stored: \"+stored+\" / \"+COUNT);\n        if(Date.now()>deadline){notify.info(\"Deadline \u2014 fetching \"+stored);break;}\n    }\n    if(stored===0)throw new Error(\"No readings in memory\");\n    const CHUNK=500;var vals=[],remaining=stored,lastStr=\"\";\n    while(remaining>0){\n        const n=Math.min(CHUNK,remaining);\n        lastStr=qts(await connection.query(\"DATA:REMove? \"+n));\n        const p=lastStr.trim().split(\",\").map(Number).filter(v=>isFinite(v));\n        vals=vals.concat(p);remaining-=n;if(p.length===0)break;\n    }\n    if(vals.length===0)throw new Error(\"0 valid values. Raw: \"+lastStr.substring(0,120));\n    const min=vals.reduce((a,b)=>a<b?a:b,vals[0]),max=vals.reduce((a,b)=>a>b?a:b,vals[0]);\n    const mean=vals.reduce((a,b)=>a+b,0)/vals.length;\n    const std=Math.sqrt(vals.reduce((a,b)=>a+(b-mean)**2,0)/vals.length),pp=max-min;\n    notify.info(LABEL+\" N=\"+vals.length\n        +\"  Mean=\"+fmtVal(mean,SFX)\n        +\"  \u03c3=\"+fmtVal(std,SFX)\n        +\"  P-P=\"+fmtVal(pp,SFX)\n        +\"  Min=\"+fmtVal(min,SFX)\n        +\"  Max=\"+fmtVal(max,SFX));\n    const f64=new Float64Array(vals),u8=new Uint8Array(f64.buffer);\n    const hScale=(COUNT*INTERVAL)/10,rawV=pp>1e-9?pp/8:Math.abs(mean)/4,vScale=Math.max(rawV,1e-7);\n    session.addChart({description:\"34465A \"+LABEL+\" | N=\"+vals.length+\" @\"+INTERVAL+\"s | Mean=\"+fmtVal(mean,SFX)+\" \u03c3=\"+fmtVal(std,SFX)+\" PP=\"+fmtVal(pp,SFX),data:[u8],samplingRate:1/INTERVAL,offset:0,scale:1,format:8,unit:\"volt\",color:\"#2196F3\",colorInverse:\"#1565C0\",label:\"34465A \"+LABEL,viewOptions:{axesLines:{type:\"fixed\",majorSubdivision:{horizontal:10,vertical:8},minorSubdivision:{horizontal:5,vertical:5}}},horizontalScale:hScale,verticalScale:vScale});\n}catch(e){notify.error(\"Acquire failed: \"+e.message);}\nfinally{connection.command(\"ABORt\");connection.command(\"FORMat:DATA ASCII\");connection.release();}"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#1565C0",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "572a40fb-1dfd-4fab-aa48-f9338f3692b5",
+        "name": "Acq ACV 100\u00d70.5s",
+        "action": {
+          "type": "javascript",
+          "data": "\nfunction fmtVal(v, sfx) {\n    if (!isFinite(v)) return String(v) + \" \" + sfx;\n    const a = Math.abs(v), sg = v < 0 ? \"-\" : \"\";\n    const noP = sfx.indexOf(\"\\u00b0\") >= 0 || sfx === \"\";\n    if (noP || a === 0) return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n    const P = [[1e12,\"T\"],[1e9,\"G\"],[1e6,\"M\"],[1e3,\"k\"],[1,\"\"],[1e-3,\"m\"],[1e-6,\"\\u03bc\"],[1e-9,\"n\"],[1e-12,\"p\"],[1e-15,\"f\"]];\n    for (const [sc,px] of P) {\n        if (a >= sc * 0.9999) {\n            return sg + parseFloat((a/sc).toPrecision(6)) + \" \" + px + sfx;\n        }\n    }\n    return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n}\n// \u2500\u2500 34465A Acquire: ACV \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nconst COUNT=100,INTERVAL=0.5,LABEL=\"ACV\",SFX=\"VAC\";\nfunction qts(r){if(r===null||r===undefined)return\"\";if(typeof r===\"string\")return r;if(typeof r===\"number\")return String(r);if(r.data){const t=new TextDecoder().decode(new Uint8Array(r.data));return t.charAt(0)==='#'?t.substring(2+parseInt(t.charAt(1))):t;}return String(r);}\nconnection.acquire();\ntry{\n    connection.command(\"ABORt\");connection.command(\"CONFigure:VOLTage:AC DEF,DEF\");\n    connection.command(\"SENSe:VOLTage:AC:NPLCycles 1\");\n    connection.command(\"SENSe:ZERO:AUTO ON\");connection.command(\"FORMat:DATA ASCII\");\n    connection.command(\"SAMPle:COUNt \"+COUNT);connection.command(\"SAMPle:SOURce TIMER\");\n    connection.command(\"SAMPle:TIMer \"+INTERVAL);connection.command(\"TRIGger:SOURce BUS\");\n    connection.command(\"TRIGger:COUNt 1\");connection.command(\"INITiate\");connection.command(\"*TRG\");\n    notify.info(\"34465A: acquiring \"+COUNT+\" \"+LABEL+\" @ \"+INTERVAL+\"s each...\");\n    const deadline=Date.now()+(COUNT*INTERVAL*1000)+30000;var stored=0;\n    while(stored<COUNT){\n        await new Promise(r=>setTimeout(r,2000));\n        stored=parseInt(qts(await connection.query(\"DATA:POINts?\")))||0;\n        notify.info(\"Stored: \"+stored+\" / \"+COUNT);\n        if(Date.now()>deadline){notify.info(\"Deadline \u2014 fetching \"+stored);break;}\n    }\n    if(stored===0)throw new Error(\"No readings in memory\");\n    const CHUNK=500;var vals=[],remaining=stored,lastStr=\"\";\n    while(remaining>0){\n        const n=Math.min(CHUNK,remaining);\n        lastStr=qts(await connection.query(\"DATA:REMove? \"+n));\n        const p=lastStr.trim().split(\",\").map(Number).filter(v=>isFinite(v));\n        vals=vals.concat(p);remaining-=n;if(p.length===0)break;\n    }\n    if(vals.length===0)throw new Error(\"0 valid values. Raw: \"+lastStr.substring(0,120));\n    const min=vals.reduce((a,b)=>a<b?a:b,vals[0]),max=vals.reduce((a,b)=>a>b?a:b,vals[0]);\n    const mean=vals.reduce((a,b)=>a+b,0)/vals.length;\n    const std=Math.sqrt(vals.reduce((a,b)=>a+(b-mean)**2,0)/vals.length),pp=max-min;\n    notify.info(LABEL+\" N=\"+vals.length\n        +\"  Mean=\"+fmtVal(mean,SFX)\n        +\"  \u03c3=\"+fmtVal(std,SFX)\n        +\"  P-P=\"+fmtVal(pp,SFX)\n        +\"  Min=\"+fmtVal(min,SFX)\n        +\"  Max=\"+fmtVal(max,SFX));\n    const f64=new Float64Array(vals),u8=new Uint8Array(f64.buffer);\n    const hScale=(COUNT*INTERVAL)/10,rawV=pp>1e-9?pp/8:Math.abs(mean)/4,vScale=Math.max(rawV,1e-7);\n    session.addChart({description:\"34465A \"+LABEL+\" | N=\"+vals.length+\" @\"+INTERVAL+\"s | Mean=\"+fmtVal(mean,SFX)+\" \u03c3=\"+fmtVal(std,SFX)+\" PP=\"+fmtVal(pp,SFX),data:[u8],samplingRate:1/INTERVAL,offset:0,scale:1,format:8,unit:\"volt\",color:\"#2196F3\",colorInverse:\"#1565C0\",label:\"34465A \"+LABEL,viewOptions:{axesLines:{type:\"fixed\",majorSubdivision:{horizontal:10,vertical:8},minorSubdivision:{horizontal:5,vertical:5}}},horizontalScale:hScale,verticalScale:vScale});\n}catch(e){notify.error(\"Acquire failed: \"+e.message);}\nfinally{connection.command(\"ABORt\");connection.command(\"FORMat:DATA ASCII\");connection.release();}"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#FF9800",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "5a21857d-c726-4fa6-9e79-2b4c8f0fd955",
+        "name": "Acq DCI 100\u00d70.5s",
+        "action": {
+          "type": "javascript",
+          "data": "\nfunction fmtVal(v, sfx) {\n    if (!isFinite(v)) return String(v) + \" \" + sfx;\n    const a = Math.abs(v), sg = v < 0 ? \"-\" : \"\";\n    const noP = sfx.indexOf(\"\\u00b0\") >= 0 || sfx === \"\";\n    if (noP || a === 0) return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n    const P = [[1e12,\"T\"],[1e9,\"G\"],[1e6,\"M\"],[1e3,\"k\"],[1,\"\"],[1e-3,\"m\"],[1e-6,\"\\u03bc\"],[1e-9,\"n\"],[1e-12,\"p\"],[1e-15,\"f\"]];\n    for (const [sc,px] of P) {\n        if (a >= sc * 0.9999) {\n            return sg + parseFloat((a/sc).toPrecision(6)) + \" \" + px + sfx;\n        }\n    }\n    return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n}\n// \u2500\u2500 34465A Acquire: DCI \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nconst COUNT=100,INTERVAL=0.5,LABEL=\"DCI\",SFX=\"ADC\";\nfunction qts(r){if(r===null||r===undefined)return\"\";if(typeof r===\"string\")return r;if(typeof r===\"number\")return String(r);if(r.data){const t=new TextDecoder().decode(new Uint8Array(r.data));return t.charAt(0)==='#'?t.substring(2+parseInt(t.charAt(1))):t;}return String(r);}\nconnection.acquire();\ntry{\n    connection.command(\"ABORt\");connection.command(\"CONFigure:CURRent:DC DEF,DEF\");\n    connection.command(\"SENSe:CURRent:DC:NPLCycles 1\");\n    connection.command(\"SENSe:ZERO:AUTO ON\");connection.command(\"FORMat:DATA ASCII\");\n    connection.command(\"SAMPle:COUNt \"+COUNT);connection.command(\"SAMPle:SOURce TIMER\");\n    connection.command(\"SAMPle:TIMer \"+INTERVAL);connection.command(\"TRIGger:SOURce BUS\");\n    connection.command(\"TRIGger:COUNt 1\");connection.command(\"INITiate\");connection.command(\"*TRG\");\n    notify.info(\"34465A: acquiring \"+COUNT+\" \"+LABEL+\" @ \"+INTERVAL+\"s each...\");\n    const deadline=Date.now()+(COUNT*INTERVAL*1000)+30000;var stored=0;\n    while(stored<COUNT){\n        await new Promise(r=>setTimeout(r,2000));\n        stored=parseInt(qts(await connection.query(\"DATA:POINts?\")))||0;\n        notify.info(\"Stored: \"+stored+\" / \"+COUNT);\n        if(Date.now()>deadline){notify.info(\"Deadline \u2014 fetching \"+stored);break;}\n    }\n    if(stored===0)throw new Error(\"No readings in memory\");\n    const CHUNK=500;var vals=[],remaining=stored,lastStr=\"\";\n    while(remaining>0){\n        const n=Math.min(CHUNK,remaining);\n        lastStr=qts(await connection.query(\"DATA:REMove? \"+n));\n        const p=lastStr.trim().split(\",\").map(Number).filter(v=>isFinite(v));\n        vals=vals.concat(p);remaining-=n;if(p.length===0)break;\n    }\n    if(vals.length===0)throw new Error(\"0 valid values. Raw: \"+lastStr.substring(0,120));\n    const min=vals.reduce((a,b)=>a<b?a:b,vals[0]),max=vals.reduce((a,b)=>a>b?a:b,vals[0]);\n    const mean=vals.reduce((a,b)=>a+b,0)/vals.length;\n    const std=Math.sqrt(vals.reduce((a,b)=>a+(b-mean)**2,0)/vals.length),pp=max-min;\n    notify.info(LABEL+\" N=\"+vals.length\n        +\"  Mean=\"+fmtVal(mean,SFX)\n        +\"  \u03c3=\"+fmtVal(std,SFX)\n        +\"  P-P=\"+fmtVal(pp,SFX)\n        +\"  Min=\"+fmtVal(min,SFX)\n        +\"  Max=\"+fmtVal(max,SFX));\n    const f64=new Float64Array(vals),u8=new Uint8Array(f64.buffer);\n    const hScale=(COUNT*INTERVAL)/10,rawV=pp>1e-9?pp/8:Math.abs(mean)/4,vScale=Math.max(rawV,1e-7);\n    session.addChart({description:\"34465A \"+LABEL+\" | N=\"+vals.length+\" @\"+INTERVAL+\"s | Mean=\"+fmtVal(mean,SFX)+\" \u03c3=\"+fmtVal(std,SFX)+\" PP=\"+fmtVal(pp,SFX),data:[u8],samplingRate:1/INTERVAL,offset:0,scale:1,format:8,unit:\"amp\",color:\"#2196F3\",colorInverse:\"#1565C0\",label:\"34465A \"+LABEL,viewOptions:{axesLines:{type:\"fixed\",majorSubdivision:{horizontal:10,vertical:8},minorSubdivision:{horizontal:5,vertical:5}}},horizontalScale:hScale,verticalScale:vScale});\n}catch(e){notify.error(\"Acquire failed: \"+e.message);}\nfinally{connection.command(\"ABORt\");connection.command(\"FORMat:DATA ASCII\");connection.release();}"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#F44336",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "cbf53d01-23b5-481a-a49b-0497b6923ff1",
+        "name": "Acq ACI 100\u00d70.5s",
+        "action": {
+          "type": "javascript",
+          "data": "\nfunction fmtVal(v, sfx) {\n    if (!isFinite(v)) return String(v) + \" \" + sfx;\n    const a = Math.abs(v), sg = v < 0 ? \"-\" : \"\";\n    const noP = sfx.indexOf(\"\\u00b0\") >= 0 || sfx === \"\";\n    if (noP || a === 0) return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n    const P = [[1e12,\"T\"],[1e9,\"G\"],[1e6,\"M\"],[1e3,\"k\"],[1,\"\"],[1e-3,\"m\"],[1e-6,\"\\u03bc\"],[1e-9,\"n\"],[1e-12,\"p\"],[1e-15,\"f\"]];\n    for (const [sc,px] of P) {\n        if (a >= sc * 0.9999) {\n            return sg + parseFloat((a/sc).toPrecision(6)) + \" \" + px + sfx;\n        }\n    }\n    return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n}\n// \u2500\u2500 34465A Acquire: ACI \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nconst COUNT=100,INTERVAL=0.5,LABEL=\"ACI\",SFX=\"AAC\";\nfunction qts(r){if(r===null||r===undefined)return\"\";if(typeof r===\"string\")return r;if(typeof r===\"number\")return String(r);if(r.data){const t=new TextDecoder().decode(new Uint8Array(r.data));return t.charAt(0)==='#'?t.substring(2+parseInt(t.charAt(1))):t;}return String(r);}\nconnection.acquire();\ntry{\n    connection.command(\"ABORt\");connection.command(\"CONFigure:CURRent:AC DEF,DEF\");\n    connection.command(\"SENSe:CURRent:AC:NPLCycles 1\");\n    connection.command(\"SENSe:ZERO:AUTO ON\");connection.command(\"FORMat:DATA ASCII\");\n    connection.command(\"SAMPle:COUNt \"+COUNT);connection.command(\"SAMPle:SOURce TIMER\");\n    connection.command(\"SAMPle:TIMer \"+INTERVAL);connection.command(\"TRIGger:SOURce BUS\");\n    connection.command(\"TRIGger:COUNt 1\");connection.command(\"INITiate\");connection.command(\"*TRG\");\n    notify.info(\"34465A: acquiring \"+COUNT+\" \"+LABEL+\" @ \"+INTERVAL+\"s each...\");\n    const deadline=Date.now()+(COUNT*INTERVAL*1000)+30000;var stored=0;\n    while(stored<COUNT){\n        await new Promise(r=>setTimeout(r,2000));\n        stored=parseInt(qts(await connection.query(\"DATA:POINts?\")))||0;\n        notify.info(\"Stored: \"+stored+\" / \"+COUNT);\n        if(Date.now()>deadline){notify.info(\"Deadline \u2014 fetching \"+stored);break;}\n    }\n    if(stored===0)throw new Error(\"No readings in memory\");\n    const CHUNK=500;var vals=[],remaining=stored,lastStr=\"\";\n    while(remaining>0){\n        const n=Math.min(CHUNK,remaining);\n        lastStr=qts(await connection.query(\"DATA:REMove? \"+n));\n        const p=lastStr.trim().split(\",\").map(Number).filter(v=>isFinite(v));\n        vals=vals.concat(p);remaining-=n;if(p.length===0)break;\n    }\n    if(vals.length===0)throw new Error(\"0 valid values. Raw: \"+lastStr.substring(0,120));\n    const min=vals.reduce((a,b)=>a<b?a:b,vals[0]),max=vals.reduce((a,b)=>a>b?a:b,vals[0]);\n    const mean=vals.reduce((a,b)=>a+b,0)/vals.length;\n    const std=Math.sqrt(vals.reduce((a,b)=>a+(b-mean)**2,0)/vals.length),pp=max-min;\n    notify.info(LABEL+\" N=\"+vals.length\n        +\"  Mean=\"+fmtVal(mean,SFX)\n        +\"  \u03c3=\"+fmtVal(std,SFX)\n        +\"  P-P=\"+fmtVal(pp,SFX)\n        +\"  Min=\"+fmtVal(min,SFX)\n        +\"  Max=\"+fmtVal(max,SFX));\n    const f64=new Float64Array(vals),u8=new Uint8Array(f64.buffer);\n    const hScale=(COUNT*INTERVAL)/10,rawV=pp>1e-9?pp/8:Math.abs(mean)/4,vScale=Math.max(rawV,1e-7);\n    session.addChart({description:\"34465A \"+LABEL+\" | N=\"+vals.length+\" @\"+INTERVAL+\"s | Mean=\"+fmtVal(mean,SFX)+\" \u03c3=\"+fmtVal(std,SFX)+\" PP=\"+fmtVal(pp,SFX),data:[u8],samplingRate:1/INTERVAL,offset:0,scale:1,format:8,unit:\"amp\",color:\"#2196F3\",colorInverse:\"#1565C0\",label:\"34465A \"+LABEL,viewOptions:{axesLines:{type:\"fixed\",majorSubdivision:{horizontal:10,vertical:8},minorSubdivision:{horizontal:5,vertical:5}}},horizontalScale:hScale,verticalScale:vScale});\n}catch(e){notify.error(\"Acquire failed: \"+e.message);}\nfinally{connection.command(\"ABORt\");connection.command(\"FORMat:DATA ASCII\");connection.release();}"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#FF5722",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "6283da5f-b937-4289-929d-653de7193f8a",
+        "name": "Acq 2WR 100\u00d70.5s",
+        "action": {
+          "type": "javascript",
+          "data": "\nfunction fmtVal(v, sfx) {\n    if (!isFinite(v)) return String(v) + \" \" + sfx;\n    const a = Math.abs(v), sg = v < 0 ? \"-\" : \"\";\n    const noP = sfx.indexOf(\"\\u00b0\") >= 0 || sfx === \"\";\n    if (noP || a === 0) return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n    const P = [[1e12,\"T\"],[1e9,\"G\"],[1e6,\"M\"],[1e3,\"k\"],[1,\"\"],[1e-3,\"m\"],[1e-6,\"\\u03bc\"],[1e-9,\"n\"],[1e-12,\"p\"],[1e-15,\"f\"]];\n    for (const [sc,px] of P) {\n        if (a >= sc * 0.9999) {\n            return sg + parseFloat((a/sc).toPrecision(6)) + \" \" + px + sfx;\n        }\n    }\n    return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n}\n// \u2500\u2500 34465A Acquire: 2W Res \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nconst COUNT=100,INTERVAL=0.5,LABEL=\"2W Res\",SFX=\"\u03a9\";\nfunction qts(r){if(r===null||r===undefined)return\"\";if(typeof r===\"string\")return r;if(typeof r===\"number\")return String(r);if(r.data){const t=new TextDecoder().decode(new Uint8Array(r.data));return t.charAt(0)==='#'?t.substring(2+parseInt(t.charAt(1))):t;}return String(r);}\nconnection.acquire();\ntry{\n    connection.command(\"ABORt\");connection.command(\"CONFigure:RESistance DEF,DEF\");\n    connection.command(\"SENSe:RESistance:NPLCycles 1\");\n    connection.command(\"SENSe:ZERO:AUTO ON\");connection.command(\"FORMat:DATA ASCII\");\n    connection.command(\"SAMPle:COUNt \"+COUNT);connection.command(\"SAMPle:SOURce TIMER\");\n    connection.command(\"SAMPle:TIMer \"+INTERVAL);connection.command(\"TRIGger:SOURce BUS\");\n    connection.command(\"TRIGger:COUNt 1\");connection.command(\"INITiate\");connection.command(\"*TRG\");\n    notify.info(\"34465A: acquiring \"+COUNT+\" \"+LABEL+\" @ \"+INTERVAL+\"s each...\");\n    const deadline=Date.now()+(COUNT*INTERVAL*1000)+30000;var stored=0;\n    while(stored<COUNT){\n        await new Promise(r=>setTimeout(r,2000));\n        stored=parseInt(qts(await connection.query(\"DATA:POINts?\")))||0;\n        notify.info(\"Stored: \"+stored+\" / \"+COUNT);\n        if(Date.now()>deadline){notify.info(\"Deadline \u2014 fetching \"+stored);break;}\n    }\n    if(stored===0)throw new Error(\"No readings in memory\");\n    const CHUNK=500;var vals=[],remaining=stored,lastStr=\"\";\n    while(remaining>0){\n        const n=Math.min(CHUNK,remaining);\n        lastStr=qts(await connection.query(\"DATA:REMove? \"+n));\n        const p=lastStr.trim().split(\",\").map(Number).filter(v=>isFinite(v));\n        vals=vals.concat(p);remaining-=n;if(p.length===0)break;\n    }\n    if(vals.length===0)throw new Error(\"0 valid values. Raw: \"+lastStr.substring(0,120));\n    const min=vals.reduce((a,b)=>a<b?a:b,vals[0]),max=vals.reduce((a,b)=>a>b?a:b,vals[0]);\n    const mean=vals.reduce((a,b)=>a+b,0)/vals.length;\n    const std=Math.sqrt(vals.reduce((a,b)=>a+(b-mean)**2,0)/vals.length),pp=max-min;\n    notify.info(LABEL+\" N=\"+vals.length\n        +\"  Mean=\"+fmtVal(mean,SFX)\n        +\"  \u03c3=\"+fmtVal(std,SFX)\n        +\"  P-P=\"+fmtVal(pp,SFX)\n        +\"  Min=\"+fmtVal(min,SFX)\n        +\"  Max=\"+fmtVal(max,SFX));\n    const f64=new Float64Array(vals),u8=new Uint8Array(f64.buffer);\n    const hScale=(COUNT*INTERVAL)/10,rawV=pp>1e-9?pp/8:Math.abs(mean)/4,vScale=Math.max(rawV,1e-7);\n    session.addChart({description:\"34465A \"+LABEL+\" | N=\"+vals.length+\" @\"+INTERVAL+\"s | Mean=\"+fmtVal(mean,SFX)+\" \u03c3=\"+fmtVal(std,SFX)+\" PP=\"+fmtVal(pp,SFX),data:[u8],samplingRate:1/INTERVAL,offset:0,scale:1,format:8,unit:\"unknown\",color:\"#2196F3\",colorInverse:\"#1565C0\",label:\"34465A \"+LABEL,viewOptions:{axesLines:{type:\"fixed\",majorSubdivision:{horizontal:10,vertical:8},minorSubdivision:{horizontal:5,vertical:5}}},horizontalScale:hScale,verticalScale:vScale});\n}catch(e){notify.error(\"Acquire failed: \"+e.message);}\nfinally{connection.command(\"ABORt\");connection.command(\"FORMat:DATA ASCII\");connection.release();}"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#4CAF50",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "750dd28f-272b-4d99-a4db-34d40634f05a",
+        "name": "Acq 4WR 100\u00d70.5s",
+        "action": {
+          "type": "javascript",
+          "data": "\nfunction fmtVal(v, sfx) {\n    if (!isFinite(v)) return String(v) + \" \" + sfx;\n    const a = Math.abs(v), sg = v < 0 ? \"-\" : \"\";\n    const noP = sfx.indexOf(\"\\u00b0\") >= 0 || sfx === \"\";\n    if (noP || a === 0) return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n    const P = [[1e12,\"T\"],[1e9,\"G\"],[1e6,\"M\"],[1e3,\"k\"],[1,\"\"],[1e-3,\"m\"],[1e-6,\"\\u03bc\"],[1e-9,\"n\"],[1e-12,\"p\"],[1e-15,\"f\"]];\n    for (const [sc,px] of P) {\n        if (a >= sc * 0.9999) {\n            return sg + parseFloat((a/sc).toPrecision(6)) + \" \" + px + sfx;\n        }\n    }\n    return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n}\n// \u2500\u2500 34465A Acquire: 4W Res \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nconst COUNT=100,INTERVAL=0.5,LABEL=\"4W Res\",SFX=\"\u03a9\";\nfunction qts(r){if(r===null||r===undefined)return\"\";if(typeof r===\"string\")return r;if(typeof r===\"number\")return String(r);if(r.data){const t=new TextDecoder().decode(new Uint8Array(r.data));return t.charAt(0)==='#'?t.substring(2+parseInt(t.charAt(1))):t;}return String(r);}\nconnection.acquire();\ntry{\n    connection.command(\"ABORt\");connection.command(\"CONFigure:FRESistance DEF,DEF\");\n    connection.command(\"SENSe:FRESistance:NPLCycles 1\");\n    connection.command(\"SENSe:ZERO:AUTO ON\");connection.command(\"FORMat:DATA ASCII\");\n    connection.command(\"SAMPle:COUNt \"+COUNT);connection.command(\"SAMPle:SOURce TIMER\");\n    connection.command(\"SAMPle:TIMer \"+INTERVAL);connection.command(\"TRIGger:SOURce BUS\");\n    connection.command(\"TRIGger:COUNt 1\");connection.command(\"INITiate\");connection.command(\"*TRG\");\n    notify.info(\"34465A: acquiring \"+COUNT+\" \"+LABEL+\" @ \"+INTERVAL+\"s each...\");\n    const deadline=Date.now()+(COUNT*INTERVAL*1000)+30000;var stored=0;\n    while(stored<COUNT){\n        await new Promise(r=>setTimeout(r,2000));\n        stored=parseInt(qts(await connection.query(\"DATA:POINts?\")))||0;\n        notify.info(\"Stored: \"+stored+\" / \"+COUNT);\n        if(Date.now()>deadline){notify.info(\"Deadline \u2014 fetching \"+stored);break;}\n    }\n    if(stored===0)throw new Error(\"No readings in memory\");\n    const CHUNK=500;var vals=[],remaining=stored,lastStr=\"\";\n    while(remaining>0){\n        const n=Math.min(CHUNK,remaining);\n        lastStr=qts(await connection.query(\"DATA:REMove? \"+n));\n        const p=lastStr.trim().split(\",\").map(Number).filter(v=>isFinite(v));\n        vals=vals.concat(p);remaining-=n;if(p.length===0)break;\n    }\n    if(vals.length===0)throw new Error(\"0 valid values. Raw: \"+lastStr.substring(0,120));\n    const min=vals.reduce((a,b)=>a<b?a:b,vals[0]),max=vals.reduce((a,b)=>a>b?a:b,vals[0]);\n    const mean=vals.reduce((a,b)=>a+b,0)/vals.length;\n    const std=Math.sqrt(vals.reduce((a,b)=>a+(b-mean)**2,0)/vals.length),pp=max-min;\n    notify.info(LABEL+\" N=\"+vals.length\n        +\"  Mean=\"+fmtVal(mean,SFX)\n        +\"  \u03c3=\"+fmtVal(std,SFX)\n        +\"  P-P=\"+fmtVal(pp,SFX)\n        +\"  Min=\"+fmtVal(min,SFX)\n        +\"  Max=\"+fmtVal(max,SFX));\n    const f64=new Float64Array(vals),u8=new Uint8Array(f64.buffer);\n    const hScale=(COUNT*INTERVAL)/10,rawV=pp>1e-9?pp/8:Math.abs(mean)/4,vScale=Math.max(rawV,1e-7);\n    session.addChart({description:\"34465A \"+LABEL+\" | N=\"+vals.length+\" @\"+INTERVAL+\"s | Mean=\"+fmtVal(mean,SFX)+\" \u03c3=\"+fmtVal(std,SFX)+\" PP=\"+fmtVal(pp,SFX),data:[u8],samplingRate:1/INTERVAL,offset:0,scale:1,format:8,unit:\"unknown\",color:\"#2196F3\",colorInverse:\"#1565C0\",label:\"34465A \"+LABEL,viewOptions:{axesLines:{type:\"fixed\",majorSubdivision:{horizontal:10,vertical:8},minorSubdivision:{horizontal:5,vertical:5}}},horizontalScale:hScale,verticalScale:vScale});\n}catch(e){notify.error(\"Acquire failed: \"+e.message);}\nfinally{connection.command(\"ABORt\");connection.command(\"FORMat:DATA ASCII\");connection.release();}"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#00897B",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "7db369a3-30d1-4556-a6ea-0031e0098d20",
+        "name": "Acq Freq 100\u00d71s",
+        "action": {
+          "type": "javascript",
+          "data": "\nfunction fmtVal(v, sfx) {\n    if (!isFinite(v)) return String(v) + \" \" + sfx;\n    const a = Math.abs(v), sg = v < 0 ? \"-\" : \"\";\n    const noP = sfx.indexOf(\"\\u00b0\") >= 0 || sfx === \"\";\n    if (noP || a === 0) return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n    const P = [[1e12,\"T\"],[1e9,\"G\"],[1e6,\"M\"],[1e3,\"k\"],[1,\"\"],[1e-3,\"m\"],[1e-6,\"\\u03bc\"],[1e-9,\"n\"],[1e-12,\"p\"],[1e-15,\"f\"]];\n    for (const [sc,px] of P) {\n        if (a >= sc * 0.9999) {\n            return sg + parseFloat((a/sc).toPrecision(6)) + \" \" + px + sfx;\n        }\n    }\n    return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n}\n// \u2500\u2500 34465A Acquire: Freq \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nconst COUNT=100,INTERVAL=1.0,LABEL=\"Freq\",SFX=\"Hz\";\nfunction qts(r){if(r===null||r===undefined)return\"\";if(typeof r===\"string\")return r;if(typeof r===\"number\")return String(r);if(r.data){const t=new TextDecoder().decode(new Uint8Array(r.data));return t.charAt(0)==='#'?t.substring(2+parseInt(t.charAt(1))):t;}return String(r);}\nconnection.acquire();\ntry{\n    connection.command(\"ABORt\");connection.command(\"CONFigure:FREQuency DEF,DEF\");\n    // no NPLC for this function\n    connection.command(\"SENSe:ZERO:AUTO ON\");connection.command(\"FORMat:DATA ASCII\");\n    connection.command(\"SAMPle:COUNt \"+COUNT);connection.command(\"SAMPle:SOURce TIMER\");\n    connection.command(\"SAMPle:TIMer \"+INTERVAL);connection.command(\"TRIGger:SOURce BUS\");\n    connection.command(\"TRIGger:COUNt 1\");connection.command(\"INITiate\");connection.command(\"*TRG\");\n    notify.info(\"34465A: acquiring \"+COUNT+\" \"+LABEL+\" @ \"+INTERVAL+\"s each...\");\n    const deadline=Date.now()+(COUNT*INTERVAL*1000)+30000;var stored=0;\n    while(stored<COUNT){\n        await new Promise(r=>setTimeout(r,2000));\n        stored=parseInt(qts(await connection.query(\"DATA:POINts?\")))||0;\n        notify.info(\"Stored: \"+stored+\" / \"+COUNT);\n        if(Date.now()>deadline){notify.info(\"Deadline \u2014 fetching \"+stored);break;}\n    }\n    if(stored===0)throw new Error(\"No readings in memory\");\n    const CHUNK=500;var vals=[],remaining=stored,lastStr=\"\";\n    while(remaining>0){\n        const n=Math.min(CHUNK,remaining);\n        lastStr=qts(await connection.query(\"DATA:REMove? \"+n));\n        const p=lastStr.trim().split(\",\").map(Number).filter(v=>isFinite(v));\n        vals=vals.concat(p);remaining-=n;if(p.length===0)break;\n    }\n    if(vals.length===0)throw new Error(\"0 valid values. Raw: \"+lastStr.substring(0,120));\n    const min=vals.reduce((a,b)=>a<b?a:b,vals[0]),max=vals.reduce((a,b)=>a>b?a:b,vals[0]);\n    const mean=vals.reduce((a,b)=>a+b,0)/vals.length;\n    const std=Math.sqrt(vals.reduce((a,b)=>a+(b-mean)**2,0)/vals.length),pp=max-min;\n    notify.info(LABEL+\" N=\"+vals.length\n        +\"  Mean=\"+fmtVal(mean,SFX)\n        +\"  \u03c3=\"+fmtVal(std,SFX)\n        +\"  P-P=\"+fmtVal(pp,SFX)\n        +\"  Min=\"+fmtVal(min,SFX)\n        +\"  Max=\"+fmtVal(max,SFX));\n    const f64=new Float64Array(vals),u8=new Uint8Array(f64.buffer);\n    const hScale=(COUNT*INTERVAL)/10,rawV=pp>1e-9?pp/8:Math.abs(mean)/4,vScale=Math.max(rawV,1e-7);\n    session.addChart({description:\"34465A \"+LABEL+\" | N=\"+vals.length+\" @\"+INTERVAL+\"s | Mean=\"+fmtVal(mean,SFX)+\" \u03c3=\"+fmtVal(std,SFX)+\" PP=\"+fmtVal(pp,SFX),data:[u8],samplingRate:1/INTERVAL,offset:0,scale:1,format:8,unit:\"frequency\",color:\"#2196F3\",colorInverse:\"#1565C0\",label:\"34465A \"+LABEL,viewOptions:{axesLines:{type:\"fixed\",majorSubdivision:{horizontal:10,vertical:8},minorSubdivision:{horizontal:5,vertical:5}}},horizontalScale:hScale,verticalScale:vScale});\n}catch(e){notify.error(\"Acquire failed: \"+e.message);}\nfinally{connection.command(\"ABORt\");connection.command(\"FORMat:DATA ASCII\");connection.release();}"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#9C27B0",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "6417b578-f74f-40bc-b72f-2fcdc2da515d",
+        "name": "Acq Temp 60\u00d75s",
+        "action": {
+          "type": "javascript",
+          "data": "\nfunction fmtVal(v, sfx) {\n    if (!isFinite(v)) return String(v) + \" \" + sfx;\n    const a = Math.abs(v), sg = v < 0 ? \"-\" : \"\";\n    const noP = sfx.indexOf(\"\\u00b0\") >= 0 || sfx === \"\";\n    if (noP || a === 0) return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n    const P = [[1e12,\"T\"],[1e9,\"G\"],[1e6,\"M\"],[1e3,\"k\"],[1,\"\"],[1e-3,\"m\"],[1e-6,\"\\u03bc\"],[1e-9,\"n\"],[1e-12,\"p\"],[1e-15,\"f\"]];\n    for (const [sc,px] of P) {\n        if (a >= sc * 0.9999) {\n            return sg + parseFloat((a/sc).toPrecision(6)) + \" \" + px + sfx;\n        }\n    }\n    return sg + parseFloat(a.toPrecision(6)) + \" \" + sfx;\n}\n// \u2500\u2500 34465A Acquire: Temp \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nconst COUNT=60,INTERVAL=5.0,LABEL=\"Temp\",SFX=\"\u00b0C\";\nfunction qts(r){if(r===null||r===undefined)return\"\";if(typeof r===\"string\")return r;if(typeof r===\"number\")return String(r);if(r.data){const t=new TextDecoder().decode(new Uint8Array(r.data));return t.charAt(0)==='#'?t.substring(2+parseInt(t.charAt(1))):t;}return String(r);}\nconnection.acquire();\ntry{\n    connection.command(\"ABORt\");connection.command(\"CONFigure:TEMPerature\");\n    // no NPLC for this function\n    connection.command(\"SENSe:ZERO:AUTO ON\");connection.command(\"FORMat:DATA ASCII\");\n    connection.command(\"SAMPle:COUNt \"+COUNT);connection.command(\"SAMPle:SOURce TIMER\");\n    connection.command(\"SAMPle:TIMer \"+INTERVAL);connection.command(\"TRIGger:SOURce BUS\");\n    connection.command(\"TRIGger:COUNt 1\");connection.command(\"INITiate\");connection.command(\"*TRG\");\n    notify.info(\"34465A: acquiring \"+COUNT+\" \"+LABEL+\" @ \"+INTERVAL+\"s each...\");\n    const deadline=Date.now()+(COUNT*INTERVAL*1000)+30000;var stored=0;\n    while(stored<COUNT){\n        await new Promise(r=>setTimeout(r,2000));\n        stored=parseInt(qts(await connection.query(\"DATA:POINts?\")))||0;\n        notify.info(\"Stored: \"+stored+\" / \"+COUNT);\n        if(Date.now()>deadline){notify.info(\"Deadline \u2014 fetching \"+stored);break;}\n    }\n    if(stored===0)throw new Error(\"No readings in memory\");\n    const CHUNK=500;var vals=[],remaining=stored,lastStr=\"\";\n    while(remaining>0){\n        const n=Math.min(CHUNK,remaining);\n        lastStr=qts(await connection.query(\"DATA:REMove? \"+n));\n        const p=lastStr.trim().split(\",\").map(Number).filter(v=>isFinite(v));\n        vals=vals.concat(p);remaining-=n;if(p.length===0)break;\n    }\n    if(vals.length===0)throw new Error(\"0 valid values. Raw: \"+lastStr.substring(0,120));\n    const min=vals.reduce((a,b)=>a<b?a:b,vals[0]),max=vals.reduce((a,b)=>a>b?a:b,vals[0]);\n    const mean=vals.reduce((a,b)=>a+b,0)/vals.length;\n    const std=Math.sqrt(vals.reduce((a,b)=>a+(b-mean)**2,0)/vals.length),pp=max-min;\n    notify.info(LABEL+\" N=\"+vals.length\n        +\"  Mean=\"+fmtVal(mean,SFX)\n        +\"  \u03c3=\"+fmtVal(std,SFX)\n        +\"  P-P=\"+fmtVal(pp,SFX)\n        +\"  Min=\"+fmtVal(min,SFX)\n        +\"  Max=\"+fmtVal(max,SFX));\n    const f64=new Float64Array(vals),u8=new Uint8Array(f64.buffer);\n    const hScale=(COUNT*INTERVAL)/10,rawV=pp>1e-9?pp/8:Math.abs(mean)/4,vScale=Math.max(rawV,1e-7);\n    session.addChart({description:\"34465A \"+LABEL+\" | N=\"+vals.length+\" @\"+INTERVAL+\"s | Mean=\"+fmtVal(mean,SFX)+\" \u03c3=\"+fmtVal(std,SFX)+\" PP=\"+fmtVal(pp,SFX),data:[u8],samplingRate:1/INTERVAL,offset:0,scale:1,format:8,unit:\"unknown\",color:\"#2196F3\",colorInverse:\"#1565C0\",label:\"34465A \"+LABEL,viewOptions:{axesLines:{type:\"fixed\",majorSubdivision:{horizontal:10,vertical:8},minorSubdivision:{horizontal:5,vertical:5}}},horizontalScale:hScale,verticalScale:vScale});\n}catch(e){notify.error(\"Acquire failed: \"+e.message);}\nfinally{connection.command(\"ABORt\");connection.command(\"FORMat:DATA ASCII\");connection.release();}"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#FF6F00",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "cdc75ef8-dca9-44c9-b926-0a42cd5f0a76",
+        "name": "Stats On",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CALCulate:FUNCtion AVERage\nCALCulate:STATe ON"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#00BCD4",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "457d523a-b61a-4e50-8ad7-aeaf845a568c",
+        "name": "Stats Read",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CALCulate:AVERage:MINimum?\nCALCulate:AVERage:MAXimum?\nCALCulate:AVERage:AVERage?\nCALCulate:AVERage:SDEViation?\nCALCulate:AVERage:COUNt?"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#00BCD4",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "45d16480-812d-4b3f-8959-c06433de128a",
+        "name": "Stats Off",
+        "action": {
+          "type": "scpi-commands",
+          "data": "CALCulate:STATe OFF"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#00BCD4",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "cccd434a-aafc-410b-8a06-7f5f4e862026",
+        "name": "Status",
+        "action": {
+          "type": "scpi-commands",
+          "data": "*IDN?\nCONFigure?\nSAMPle:COUNt?\nSAMPle:SOURce?\nSAMPle:TIMer?\nTRIGger:SOURce?\nROUTe:TERMinals?\nSYSTem:ERRor?"
+        },
+        "showInToolbar": true,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#607D8B",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "0903b910-91d4-4c5a-b42f-bd04a2680caf",
+        "name": "Clr Errors",
+        "action": {
+          "type": "scpi-commands",
+          "data": "*CLS\nSYSTem:ERRor?"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#607D8B",
+        "requiresConfirmation": false
+      },
+      {
+        "id": "83f4bfac-01dc-4fef-a19e-4a153d9e0a66",
+        "name": "Reset",
+        "action": {
+          "type": "scpi-commands",
+          "data": "*RST\n*CLS"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#F44336",
+        "requiresConfirmation": true
+      },
+      {
+        "id": "9dc3ef80-744a-401f-b90a-502ef340d099",
+        "name": "Diag",
+        "action": {
+          "type": "javascript",
+          "data": "// \u2500\u2500 34465A Diagnostic v46 \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n// Tests each command step, checking SYSTem:ERRor? after each one.\n// Key finding: READ? requires CONFigure to be set \u2014 *CLS alone is not enough.\n\nasync function resetAndAcquire() {\n    try { connection.release(); } catch(e) {}\n    await new Promise(r=>setTimeout(r,500));\n    await connection.acquire(true);\n}\n\nfunction qts(r) {\n    if (r===null||r===undefined) return \"\";\n    if (typeof r===\"string\") return r;\n    if (typeof r===\"number\") return String(r);\n    if (r.data) {\n        const t=new TextDecoder().decode(new Uint8Array(r.data));\n        return t.charAt(0)==='#'?t.substring(2+parseInt(t.charAt(1))):t;\n    }\n    return String(r);\n}\n\nasync function step(label, fn) {\n    try {\n        const result = await fn();\n        const e = qts(await connection.query(\"SYSTem:ERRor?\")).trim();\n        const ok = e.startsWith(\"+0\") || e.startsWith(\"0,\");\n        notify.info((ok?\"OK\":\"FAIL\") + \" \" + label + (result?\" => \"+String(result).substring(0,25):\"\") + (ok?\"\":\" ERR:\"+e.substring(0,20)));\n        return ok;\n    } catch(ex) {\n        notify.error(\"THROW \" + label + \": \" + (ex&&ex.message?ex.message:String(ex)));\n        return false;\n    }\n}\n\nnotify.info(\"Diag v44: acquiring...\");\nawait resetAndAcquire();\nnotify.info(\"Diag v44: ready\");\n\ntry {\n    await step(\"*CLS\",          () => { connection.command(\"*CLS\"); return null; });\n    await step(\"ABORt\",         () => { connection.command(\"ABORt\"); return null; });\n\n    // CONFigure? to read active function\n    const conf = qts(await connection.query(\"CONFigure?\")).trim().replace(/\"/g,\"\");\n    const e1 = qts(await connection.query(\"SYSTem:ERRor?\")).trim();\n    notify.info((e1.startsWith(\"+0\")?\"OK\":\"FAIL\") + \" CONFigure? => \" + conf.substring(0,30));\n\n    // Re-send CONFigure to ensure measurement engine is initialised\n    const funcParts = conf.split(/[\\s,]+/);\n    const func = funcParts[0].toUpperCase();\n    let confCmd = null;\n    if      (func.includes(\"VOLT\")&&func.includes(\"DC\")) confCmd = \"CONFigure:VOLTage:DC DEF,DEF\";\n    else if (func.includes(\"VOLT\")&&func.includes(\"AC\")) confCmd = \"CONFigure:VOLTage:AC DEF,DEF\";\n    else if (func.includes(\"CURR\")&&func.includes(\"DC\")) confCmd = \"CONFigure:CURRent:DC DEF,DEF\";\n    else if (func.includes(\"CURR\")&&func.includes(\"AC\")) confCmd = \"CONFigure:CURRent:AC DEF,DEF\";\n    else if (func.includes(\"FRES\"))                      confCmd = \"CONFigure:FRESistance DEF,DEF\";\n    else if (func.includes(\"RES\"))                       confCmd = \"CONFigure:RESistance DEF,DEF\";\n    else if (func.includes(\"FREQ\"))                      confCmd = \"CONFigure:FREQuency DEF,DEF\";\n    else if (func.includes(\"CAP\"))                       confCmd = \"CONFigure:CAPacitance DEF,DEF\";\n    else if (func.includes(\"TEMP\"))                      confCmd = \"CONFigure:TEMPerature\";\n    else if (func.includes(\"CONT\"))                      confCmd = \"CONFigure:CONTinuity\";\n    else if (func.includes(\"DIOD\"))                      confCmd = \"CONFigure:DIODe\";\n\n    if (confCmd) {\n        await step(\"CONFigure re-send: \"+confCmd, () => { connection.command(confCmd); return null; });\n    }\n\n    // SENSe:VOLTage:AC:NPLCycles causes -113 on firmware A.03.03 \u2014 omitted\n    await step(\"SAMPle:COUNt 1\",() => { connection.command(\"SAMPle:COUNt 1\"); return null; });\n\n    // READ? should now work\n    notify.info(\"Attempting READ?...\");\n    const val = qts(await connection.query(\"READ?\")).trim();\n    const e2 = qts(await connection.query(\"SYSTem:ERRor?\")).trim();\n    notify.info((e2.startsWith(\"+0\")?\"OK\":\"FAIL\") + \" READ? => \" + val.substring(0,25) + \" err:\" + e2.substring(0,15));\n\n    // Second READ? to confirm loop works\n    const val2 = qts(await connection.query(\"READ?\")).trim();\n    notify.info(\"READ? #2 => \" + val2.substring(0,25));\n\n} catch(ex) {\n    notify.error(\"Diag error: \" + (ex&&ex.message?ex.message:String(ex)));\n} finally {\n    connection.command(\"ABORt\");\n    connection.command(\"SYSTem:LOCal\");\n    await new Promise(r=>setTimeout(r,200));\n    connection.release();\n    notify.info(\"Diag v44 done.\");\n}"
+        },
+        "showInToolbar": false,
+        "toolbarButtonPosition": 0,
+        "toolbarButtonColor": "#F44336",
+        "requiresConfirmation": false
+      }
+    ],
+    "moreDescription": "The Keysight 34465A is a 6.5-digit Truevolt DMM with 0.003% DCV accuracy and 5000 readings/second. Measures DCV, ACV, DCI, ACI, 2W/4W resistance, frequency, period, capacitance, temperature (thermocouple, RTD, thermistor), continuity, and diode.\n\nFamily covers: 34461A (6.5-digit base), 34465A (6.5-digit), 34470A (7.5-digit).\n\nConnects via LAN port 5025 (raw SCPI) or HiSLIP. Also USB-TMC and optional GPIB.\n\nNote: Older firmware may return 'Agilent Technologies' in IDN \u2014 update the IDN field in connection settings if auto-detection fails.\n\nConnection: Enter the instrument IP address manually when adding to EEZ Studio (Ethernet, port 5025). Default lab address: 192.168.1.51"
+  },
+  "image": "image.png"
+}

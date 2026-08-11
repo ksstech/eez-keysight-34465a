@@ -3,7 +3,7 @@
   "name": "keysight_34465a",
   "description": "6.5-digit Truevolt digital multimeter",
   "displayName": "Keysight 34465A",
-  "version": "1.0.46",
+  "version": "1.0.47",
   "author": "Community",
   "eez-studio": {
     "properties": {

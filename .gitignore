@@ -1,0 +1,5 @@
+# Built EEZ Studio extension zip — published as a GitHub Release asset instead
+# of being committed (avoids binary bloat in git history on every version bump).
+*.zip
+
+.DS_Store
